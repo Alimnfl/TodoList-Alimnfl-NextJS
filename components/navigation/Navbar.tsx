@@ -76,7 +76,7 @@ export default function Navbar() {
       <motion.div
         animate={isMobile ? controls : { x: "0%" }}
         initial={{ x: !isOpen ? "-100%" : "0%" }}
-        className={`md:z-20 fixed md:static top-0 left-0 h-full w-64 bg-white shadow-md p-6 flex flex-col gap-3 min-h-screen md:translate-x-0 md:shadow-none min-w-[350px]`}
+        className={`z-20 fixed md:static top-0 left-0 h-full w-64 bg-white shadow-md p-6 flex flex-col gap-3 min-h-screen md:translate-x-0 md:shadow-none min-w-[350px]`}
       >
         <div className="py-10 flex flex-col gap-2 w-full">
           <div className="flex text-2xl font-semibold flex-row gap-3 bg-green-500 w-fit rounded-xl px-2 py-1 text-white">
