@@ -11,7 +11,7 @@ export default function CardCategory({
   data: TasksProps | null;
   toggleSidebar: ((data: boolean) => void) | null;
 }) {
-  const { setSelectedCategory } = useTodo();
+  const { setSelectedCategory, selectedCategory } = useTodo();
 
   if (create) {
     return (
@@ -30,7 +30,11 @@ export default function CardCategory({
           toggleSidebar(false);
         }
       }}
-      className="flex cursor-pointer flex-row px-3 py-2 hover:border border-green-200 shadow-sm hover:border-green-200 justify-between rounded-xl items-center"
+      className={`flex cursor-pointer flex-row px-3 py-2 ${
+        selectedCategory?.content === data?.category
+          ? "border-green-200 border"
+          : ""
+      } hover:border border-green-200 shadow-sm hover:border-green-200 justify-between rounded-xl items-center`}
     >
       <div className="flex flex-row gap-4 items-center">
         <div className="bg-green-400 text-white p-2 rounded-full">

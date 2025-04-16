@@ -40,13 +40,16 @@ export default function Navbar() {
       if (!mobile) {
         controls.set({ x: "0%" });
         setIsOpen(true);
+      } else {
+        controls.set({ x: "0%" });
+        setIsOpen(true);
       }
     };
 
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  }, [controls]);
 
   const handlers = useSwipeable({
     onSwipedLeft: () => isMobile && toggleSidebar(false),
@@ -72,10 +75,8 @@ export default function Navbar() {
       )}
 
       <motion.div
-        animate={isMobile ? controls : undefined}
-        initial={{
-          x: !isOpen ? "-100%" : "0",
-        }}
+        animate={isMobile ? controls : { x: "0%" }}
+        initial={{ x: !isOpen ? "-100%" : "0%" }}
         className="fixed md:static top-0 left-0 h-full w-64 bg-white shadow-md p-6 flex flex-col gap-3 z-50 min-h-screen md:translate-x-0 md:shadow-none min-w-[350px]"
       >
         <div className="py-10 flex flex-col gap-2 w-full">
