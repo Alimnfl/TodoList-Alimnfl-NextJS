@@ -84,9 +84,9 @@ export default function Navbar() {
           className={`z-20 fixed md:static top-0 left-0 h-full w-64 bg-white shadow-md p-6 flex flex-col gap-3 min-h-screen md:translate-x-0 md:shadow-none min-w-[350px]`}
         >
           <div className="py-10 flex flex-col gap-2 w-full">
-            <div className="flex text-2xl font-semibold flex-row gap-3 bg-green-500 w-fit rounded-xl px-2 py-1 text-white">
-              <span>@</span>
-              <h2 className="">Todo Alimnfl</h2>
+            <div className="flex text-2xl items-center font-semibold flex-row gap-2 bg-green-500 w-fit rounded-xl px-2 py-1 text-white">
+              <span className="p-1 bg-green-700 rounded-xl">@</span>
+              <h2 className="">Ammm Todo</h2>
             </div>
             <span className="text-gray-600 sm:text-base text-sm">
               Your companion for a more organized journey

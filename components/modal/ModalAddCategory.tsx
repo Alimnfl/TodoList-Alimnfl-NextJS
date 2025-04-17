@@ -30,7 +30,7 @@ export default function ModalAddCategory() {
       </DialogTrigger>
       <DialogContent className="w-full flex flex-col gap-1 h-fit max-w-[350px] md:max-w-xl">
         <div className="bg-green-300 font-medium text-green-700 p-1 text-[10px] w-fit">
-          Category Todo Alimnfl
+          Category Ammm Todo
         </div>
         <div className="flex flex-col gap-2 w-full py-2 justify-between h-fit">
           <DialogTitle className="font-semibold">
